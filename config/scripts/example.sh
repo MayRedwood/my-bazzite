@@ -8,3 +8,4 @@ set -oue pipefail
 # Your code goes here.
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
+mv /usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/share/glvnd/egl_vendor.d/90_nvidia.json
