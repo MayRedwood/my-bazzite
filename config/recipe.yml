@@ -29,30 +29,9 @@ modules:
       - gh
       - ripgrep
 
-  # GNOME triple buffering, we need to uninstall VRR packages first
-  - type: rpm-ostree
-    repos: 
-      - https://copr.fedorainfracloud.org/coprs/trixieua/mutter-patched/repo/fedora-%OS_VERSION%/trixieua-mutter-patched-fedora-%OS_VERSION%.repo
-    remove:
-      - mutter
-      - mutter-common
-      - gnome-control-center
-      - gnome-control-center-filesystem
-      - gnome-shell
-      - xorg-x11-server-Xwayland
-      - gdm
-    install:
-      - mutter
-      - mutter-common
-      - gnome-control-center
-      - gnome-control-center-filesystem
-      - gnome-shell
-      - xorg-x11-server-Xwayland
-      - gdm
-
-  # Make it so GNOME Shell doesn't use Nvidia by default
   - type: script
     scripts:
-      - example.sh
+      - example.sh # Make it so GNOME Shell doesn't use Nvidia by default
+      - tribuffer.sh # Replace VRR mutter with triple buffer mutter
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
