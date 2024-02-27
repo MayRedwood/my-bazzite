@@ -5,7 +5,7 @@ set -oue pipefail
 wget https://copr.fedorainfracloud.org/coprs/trixieua/mutter-patched/repo/fedora-$(rpm -E %fedora)/trixieua-mutter-patched-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_trixieua-mutter-patched.repo
 
 # Reset overrides
-rpm-ostree override replace \
+rpm-ostree override replace --experimental \
   gnome-control-center \
   gnome-control-center-filesystem
 # Apply our overrides
