@@ -9,4 +9,4 @@ set -oue pipefail
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
 # Makes it so GNOME Shell runs on the iGPU
-# mv /usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/share/glvnd/egl_vendor.d/90_nvidia.json
+mv /usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/share/glvnd/egl_vendor.d/90_nvidia.json

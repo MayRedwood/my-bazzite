@@ -27,10 +27,11 @@ modules:
       - gh
       - ripgrep
       - zoxide
+      - squashfs-tools # For working with systemd-sysext
 
   - type: script
     scripts:
-      - example.sh # Make it so GNOME Shell doesn't use Nvidia by default
+      # - example.sh # Make it so GNOME Shell doesn't use Nvidia by default
       - tribuffer.sh # Replace VRR mutter with triple buffer mutter
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
