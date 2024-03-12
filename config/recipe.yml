@@ -27,6 +27,7 @@ modules:
       - gh
       - ripgrep
       - zoxide
+      - tealdeer
       - squashfs-tools # For working with systemd-sysext
 
   - type: script
